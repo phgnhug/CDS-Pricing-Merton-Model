@@ -6,11 +6,9 @@
 
 ---
 
-## 🎯 Project Overview
+## Project Overview
 
 This project implements **CDS (Credit Default Swap) pricing using the Merton structural credit model** — a cornerstone approach in quantitative finance for valuing credit derivatives.
-
-### What We're Doing
 
 We're building a **complete pipeline** that:
 
@@ -21,7 +19,7 @@ We're building a **complete pipeline** that:
 5. **Analyzes sensitivity** to market parameters
 6. **Validates results** against real CDS market spreads
 
-### Why This Matters
+### Reason we do this
 
 The Merton model elegantly connects equity markets (what we observe) to credit risk (what we want to know). This bridge is fundamental to pricing corporate debt and credit derivatives.
 
@@ -31,7 +29,7 @@ Investment banks use structural credit models like this to price CDS, assess cor
 
 ---
 
-## 📊 The Model
+## The Model
 
 ### Merton Framework
 
