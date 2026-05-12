@@ -79,7 +79,7 @@ def cds_fair_spread(default_probability, recovery_rate, T, r, notional=1.0):
         recovery_rate (float): Recovery rate (0-1)
         T (float): Maturity in years
         r (float): Risk-free rate (annualized)
-        notional (float): Notional amount
+        notional (float): Notional amount (not used for spread calculation)
     
     Returns:
         float: Fair CDS spread (as decimal, e.g., 0.012 for 1.2%)
@@ -105,11 +105,10 @@ def cds_fair_spread(default_probability, recovery_rate, T, r, notional=1.0):
     # LGD
     lgd = 1.0 - recovery_rate
     
-    # Fair spread
-    spread = (hazard_rate * lgd / annuity_factor) * notional
+    # Fair spread (per unit of notional)
+    spread = hazard_rate * lgd / annuity_factor
     
     return spread
-
 
 def cds_fair_spread_bps(default_probability, recovery_rate, T, r, notional=1.0):
     """
